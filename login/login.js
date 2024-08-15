@@ -1,3 +1,4 @@
+import {auth, signInWithEmailAndPassword   } from '../firebase.js';
 
 let formfield = document.querySelectorAll("form input")
 let loginBtn = document.getElementById("loginBtn")
@@ -6,7 +7,26 @@ const [loginEmail, loginPassword] = formfield;
 
 const login = () =>{
     event.preventDefault();
-    console.log(loginEmail.value, loginPassword.value)
+    // console.log(loginEmail.value, loginPassword.value)
+    signInWithEmailAndPassword(loginEmail.value, loginPassword)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    Toastify({
+        text: "login succesfully",      
+        duration: 3000      
+        }).showToast();
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    Toastify({
+        text: `${errorMessage}`,      
+        duration: 3000      
+        }).showToast();
+  });
+
        
 }
 

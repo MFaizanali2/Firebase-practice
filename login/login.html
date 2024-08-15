@@ -12,20 +12,11 @@
 <body>
 
     <div class="container">
-
-        <div class="row">
-            <div class="col">
-                <img src="./images/hat.png" alt="Hat Image" id="hat">
-            </div>
-            <div class="col">
-                <div id="quiz">
-                    <img src="../signup/images/QuizGrad.png" alt="logo image" id="quiz1">
-                </div>
                 <h5>If you're signed-up now login to continue</h5>
                 <form onsubmit="login();">
                     <div class="mb-3">
                         <label for="email">Email:</label>
-                        <input type="email" class="form-control" id="loginEmail" style="width:70%" placeholder="Email and phone">
+                        <input type="email" class="form-control" id="loginEmail" placeholder="Email and phone">
                     </div>
                     <div class="mb-3">
                         <label for="password">Password:</label>
@@ -34,13 +25,14 @@
                     </div>
                     <div class="mb-3">
 
+                        <a href="../signup/signup.html">Signup</a>
                         <div id="bottom">
                             <button type="submit" id="btn" class="btn btn-primary" onclick="login();">Log In</button>
                         </div>
                 </form>
-            </div>
+          
 
-        </div>
+        
 
     </div>
 

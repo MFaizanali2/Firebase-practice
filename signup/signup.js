@@ -1,12 +1,31 @@
-import {auth } from '../firebase.js';
+import {auth, createUserWithEmailAndPassword  } from '../firebase.js';
 
 let formfield = document.querySelectorAll("form input")
+let signupbtn = document.getElementById("signupBtn");
 
 const [UserEmail, UserPassword,] = formfield;
 
-console.log(UserEmail, UserPassword)
 
-console.log(auth)
+// console.log(UserEmail, UserPassword)
+// console.log(auth)
+
+const signup = () =>{
+    event.preventDefault();
+    createUserWithEmailAndPassword(auth, UserEmail.value , UserPassword.value)
+  .then((userCredential) => {
+    // Signed up 
+    const user = userCredential.user;
+    console.log(user);
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    console.log(errorMessage);
+    // ..
+  });
+}
+signupbtn.addEventListener("click", signup)
 
 
 

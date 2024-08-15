@@ -1,4 +1,4 @@
-import {auth, signInWithEmailAndPassword   } from '../firebase.js';
+import {auth, signInWithEmailAndPassword  } from '../firebase';
 
 let formfield = document.querySelectorAll("form input")
 let loginBtn = document.getElementById("loginBtn")
@@ -8,7 +8,7 @@ const [loginEmail, loginPassword] = formfield;
 const login = () =>{
     event.preventDefault();
     // console.log(loginEmail.value, loginPassword.value)
-    signInWithEmailAndPassword(loginEmail.value, loginPassword)
+    signInWithEmailAndPassword(loginEmail.value, loginPassword.value)
   .then((userCredential) => {
     // Signed in 
     const user = userCredential.user;

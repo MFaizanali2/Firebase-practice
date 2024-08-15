@@ -4,58 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup Form</title>
-    <link rel="stylesheet" href="signup.css">
+    <title>Login Foam</title>
+    <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 </head>
 
 <body>
 
-
     <div class="container">
+
         <div class="row">
-            <div class="col">
-                <div id="quiz">
-                <img src="./images/QuizGrad.png" alt="logo image" id="quiz1">
-                <h3>Welcome!</h3>
-            </div>
-                <form onsubmit="signup();">
-                    <div class="mb-3">
-                        <label for="name">Name:</label>
-                        <input type="text" class="form-control" id="Username" placeholder="Enter your name">
-                      </div>
-                    <div class="mb-3">
-                        <label for="email">Email:</label>
-                      <input type="email" class="form-control" id="UserEmail"  placeholder="Email and phone">
-                    </div>
-                    <div class="mb-3">
-                        <label for="password">Password:</label>
-                      <input type="password" class="form-control" id="UserPassword" placeholder="Enter your Password">
-                    </div>
-                    <div class="mb-3">
-                        
-                      <input accept=".png,jpg,jpeg,wepg" onchange="uploadimage();" type="file" id="Userpic">
-                      <!-- <button onclick="uploadimage();">Upload</button> -->
-                    </div>
-                    <!-- <div class="mb-3 form-check" style="margin-left: 30px;">
-                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                      <label class="form-check-label" for="exampleCheck1" id="show">Show Password</label>
-                    </div> -->
-                    <div id="bottom">
-                    <!-- <a href="#">Forget password ?</a> -->
-                    <button type="submit" id="btn" class="btn btn-primary" onclick="uploadimage();" onclick="signup();">Log In</button>
-                    </div>
-                  </form>
-            </div>
             <div class="col">
                 <img src="./images/hat.png" alt="Hat Image" id="hat">
             </div>
+            <div class="col">
+                <div id="quiz">
+                    <img src="../signup/images/QuizGrad.png" alt="logo image" id="quiz1">
+                </div>
+                <h5>If you're signed-up now login to continue</h5>
+                <form onsubmit="login();">
+                    <div class="mb-3">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="loginEmail" style="width:70%" placeholder="Email and phone">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password">Password:</label>
+                        <input type="password" class="form-control" id="loginPassword log"
+                            placeholder="Enter your Password">
+                    </div>
+                    <div class="mb-3">
+
+                        <div id="bottom">
+                            <button type="submit" id="btn" class="btn btn-primary" onclick="login();">Log In</button>
+                        </div>
+                </form>
+            </div>
+
         </div>
 
     </div>
 
-     <script src="signup.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

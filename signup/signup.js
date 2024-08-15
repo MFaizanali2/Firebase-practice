@@ -11,9 +11,11 @@ const [UserEmail, UserPassword,] = formfield;
 
 const signup = () =>{
     event.preventDefault();
+    signupbtn.innerHTML = "...Loading";
     createUserWithEmailAndPassword(auth, UserEmail.value , UserPassword.value)
   .then((userCredential) => {
     // Signed up 
+    signupbtn.innerHTML = "...Loading";
     const user = userCredential.user;
     console.log(user);
     // ...

@@ -8,7 +8,7 @@ const [loginEmail, loginPassword] = formfield;
 const login = () =>{
     event.preventDefault();
     // console.log(loginEmail.value, loginPassword.value)
-    signInWithEmailAndPassword(loginEmail.value, loginPassword.value)
+    signInWithEmailAndPassword(auth, loginEmail.value, loginPassword.value)
   .then((userCredential) => {
     // Signed in 
     const user = userCredential.user;

@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100vh;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#quiz{
+    padding: 10px 25%;
+    /* width: 100px;
+    height: 100px; */
+}
+#quiz #quiz1{
+    width: 250px;
+    height: 50px;
+}
+#quiz h3{
+    color: gray;
+    padding-top: 10px;
+    padding-left: 50px;
+}
+.col label{
+    padding: 10px;
+}
+.col input{
+    width: 70%;
+}
+#file{
+    width: 280px;
+}
+#btn{
+    padding: 10px 30px;
+    font-weight: bolder;
+    background-color: yellow;
+    border: none;
+    font-size: 18px;
+    color: gray;
+}
+#hat{
+    padding: 20% 5%;
+    width: 500px;
+    height: 500px;
+}

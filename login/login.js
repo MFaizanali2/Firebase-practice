@@ -1,4 +1,4 @@
-import {auth, signInWithEmailAndPassword  } from '../firebase';
+import {auth, signInWithEmailAndPassword, onAuthStateChanged } from '../firebase';
 
 let formfield = document.querySelectorAll("form input")
 let loginBtn = document.getElementById("loginBtn")
@@ -33,6 +33,18 @@ const login = () =>{
 loginBtn.addEventListener("click", login)
 
 
+
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+      // User is signed in, see docs for a list of available properties
+      // https://firebase.google.com/docs/reference/js/auth.user
+      const uid = user.uid;
+      // ...
+    } else {
+      // User is signed out
+      // ...
+    }
+  });
 
 
 // console.log(formfield)

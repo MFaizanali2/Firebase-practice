@@ -18,16 +18,19 @@ const signup = () =>{
     signupbtn.innerHTML = "Signup";
     const user = userCredential.user;
     console.log(user);
+    Toastify({
+        text: "Signup Succesfully",       
+        duration: 3000        
+        }).showToast();
     // ...
   })
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
-    console.log(errorMessage);
     signupbtn.innerHTML = "Signup";
     Toastify({
 
-        text: "This is a error",
+        text: `${errorMessage}`,
         
         duration: 3000
         

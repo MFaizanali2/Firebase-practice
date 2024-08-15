@@ -1,9 +1,12 @@
+import {auth } from '../firebase.js';
+
 let formfield = document.querySelectorAll("form input")
 
-const [Username, UserEmail, UserPassword, Userpic] = formfield;
+const [UserEmail, UserPassword,] = formfield;
 
-console.log(Username, UserEmail, UserPassword)
-console.log(app)
+console.log(UserEmail, UserPassword)
+
+console.log(auth)
 
 
 

@@ -3,7 +3,7 @@ let formfield = document.querySelectorAll("form input")
 const [Username, UserEmail, UserPassword, Userpic] = formfield;
 
 console.log(Username, UserEmail, UserPassword)
-
+console.log(app)
 
 
 

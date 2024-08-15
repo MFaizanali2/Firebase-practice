@@ -18,6 +18,13 @@ body{
     padding: 20px;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
+h5{
+    color: rgb(163, 154, 154);
+    padding-top: 10px;
+    font-family: sans-serif;
+    
+    /* padding-left: 10px; */
+}
 #quiz{
     padding: 10px 25%;
     /* width: 100px;

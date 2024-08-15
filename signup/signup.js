@@ -15,7 +15,7 @@ const signup = () =>{
     createUserWithEmailAndPassword(auth, UserEmail.value , UserPassword.value)
   .then((userCredential) => {
     // Signed up 
-    signupbtn.innerHTML = "...Loading";
+    signupbtn.innerHTML = "Signup";
     const user = userCredential.user;
     console.log(user);
     // ...
@@ -24,6 +24,14 @@ const signup = () =>{
     const errorCode = error.code;
     const errorMessage = error.message;
     console.log(errorMessage);
+    signupbtn.innerHTML = "Signup";
+    Toastify({
+
+        text: "This is a error",
+        
+        duration: 3000
+        
+        }).showToast();
     // ..
   });
 }

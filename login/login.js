@@ -4,6 +4,14 @@ let loginBtn = document.getElementById("loginBtn")
 
 const [loginEmail, loginPassword] = formfield;
 
+const login = () =>{
+    event.preventDefault();
+    console.log(loginEmail.value, loginPassword.value)
+       
+}
+
+loginBtn.addEventListener("click", login)
+
 
 
 

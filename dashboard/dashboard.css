@@ -53,12 +53,12 @@ html,body{
     font-size: 20px;
     padding: 20px;
 }
-/* .landing-img{
+.landing-img{
     width: 425px !important;
     height: 415px !important;
     padding-top: 40px;
     padding-left: 20px !important;
-} */
+}
 .col .btn1{
     background-color: yellow !important;
     border: 2px solid yellowgreen !important;

@@ -1,10 +1,10 @@
-import {auth,GoogleAuthProvider} from '../firebase.js';
+// import {auth,GoogleAuthProvider} from '../firebase.js';
 
-let googleBtn = document.getElementById('googleBtn');
-const provider = new GoogleAuthProvider();
+// let googleBtn = document.getElementById('googleBtn');
+// const provider = new GoogleAuthProvider();
 
-const googleSign = () => {
-    console.log("clicked")
-}
+// const googleSign = () => {
+//     console.log("clicked")
+// }
 
-googleBtn.addEventListener('click', googleSign)
+// googleBtn.addEventListener('click', googleSign)

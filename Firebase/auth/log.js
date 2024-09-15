@@ -63,3 +63,11 @@ const signInAdmin = () =>{
 }
 
 signup.addEventListener('click', signInAdmin)
+
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    window.location.href = './dash.html'
+    const uid = user.uid;
+    // ...
+  } 
+});

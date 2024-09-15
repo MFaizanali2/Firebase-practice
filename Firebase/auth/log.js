@@ -1,6 +1,7 @@
 import { auth, GoogleAuthProvider, signInWithPopup } from '../firebase.js';
 
 let googleBtn = document.getElementById('googleBtn');
+let logoutbtn = document.getElementById('logoutbtn')
 const provider = new GoogleAuthProvider();
 
 const googleSign = () => {
@@ -11,7 +12,7 @@ const googleSign = () => {
             const credential = GoogleAuthProvider.credentialFromResult(result);
             const token = credential.accessToken;
             const user = result.user;
-            console.log(user)
+            console.log(user) 
             // ...
         }).catch((error) => {
             // Handle Errors here.
@@ -24,4 +25,10 @@ const googleSign = () => {
         });
 }
 
+const logout = () =>{
+    console.log("click")
+}
+
+
+logoutbtn.addEventListener('click', logout)
 googleBtn.addEventListener('click', googleSign)

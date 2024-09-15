@@ -47,7 +47,8 @@ let signup = document.getElementById("signupbtn")
 const signInAdmin = () =>{
     event.preventDefault();
     console.log("admin signin")
-    signInWithEmailAndPassword(auth, email, password)
+
+    signInWithEmailAndPassword(auth, email.value, password.value)
   .then((userCredential) => {
     // Signed in 
     const user = userCredential.user;

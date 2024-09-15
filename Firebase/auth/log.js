@@ -1,4 +1,4 @@
-import { auth, GoogleAuthProvider, signInWithPopup, signOut, signInWithEmailAndPassword } from '../firebase.js';
+import { auth, GoogleAuthProvider, signInWithPopup, signOut, signInWithEmailAndPassword, onAuthStateChanged  } from '../firebase.js';
 
 // let googleBtn = document.getElementById('googleBtn');
 // let logoutbtn = document.getElementById('logoutbtn')
@@ -46,13 +46,14 @@ let signup = document.getElementById("signupbtn")
 
 const signInAdmin = () =>{
     event.preventDefault();
-    console.log("admin signin")
+    // console.log("admin signin")
 
     signInWithEmailAndPassword(auth, email.value, password.value)
   .then((userCredential) => {
     // Signed in 
     const user = userCredential.user;
     console.log(user)
+    alert("sign in")
   })
   .catch((error) => {
     const errorCode = error.code;

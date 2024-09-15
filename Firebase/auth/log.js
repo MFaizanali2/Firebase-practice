@@ -1,4 +1,4 @@
-import { auth, GoogleAuthProvider, signInWithPopup } from '../firebase.js';
+import { auth, GoogleAuthProvider, signInWithPopup, signOut } from '../firebase.js';
 
 let googleBtn = document.getElementById('googleBtn');
 let logoutbtn = document.getElementById('logoutbtn')
